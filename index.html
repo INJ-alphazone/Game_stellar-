@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ru"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#070817"><meta name="description" content="Маленькое космическое приключение с секретным финалом.">
+<title>Секретная карта звёзд</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<div class="stars stars-back"></div><div class="stars stars-front"></div>
+<main class="app">
+<header class="topbar"><div class="brand"><span class="brand-mark">✦</span> ORBITAL / 001</div><div class="header-actions"><button class="sound-toggle" id="soundToggle" type="button" aria-pressed="false"><span id="soundIcon">♫</span> <span id="soundLabel">ЗВУК: ВЫКЛ</span></button><div class="status"><i></i> СИГНАЛ СТАБИЛЕН</div></div></header>
+<section class="intro" id="intro"><p class="eyebrow">НЕБОЛЬШАЯ МИССИЯ · 4–6 МИНУТ</p><h1>Секретная <span>карта звёзд</span></h1><p class="lead">Где-то здесь спрятан секрет. Найди три созвездия, выполни задания и доберись до координат финала.</p><button class="primary" id="startBtn">Начать экспедицию <b>↗</b></button><p class="microcopy">Никаких сложных правил. Только любопытство и немного космического хаоса.</p></section>
+<section class="mission hidden" id="mission"><div class="mission-heading"><div><p class="eyebrow">ЗВЁЗДНАЯ СИСТЕМА 01</p><h2>Выбери точку на карте</h2></div><div class="progress"><strong id="progressCount">0</strong> / 3 найдено</div></div>
+<p class="map-hint">Нажимай на светящиеся звёзды — у каждой своё задание.</p>
+<div class="map-wrap"><div class="map-grid"></div><svg class="constellation-lines" viewBox="0 0 600 400" preserveAspectRatio="none"><path d="M80 110 L205 72 L282 156 L400 100 L520 180"/><path d="M100 300 L220 250 L335 315 L475 280"/><path d="M282 156 L220 250"/></svg>
+<button class="star-node node-a" data-star="0"><span class="star-glyph">✦</span><span class="node-label">АЛЬТАИР</span></button><button class="star-node node-b" data-star="1"><span class="star-glyph">✦</span><span class="node-label">ВЕГА</span></button><button class="star-node node-c" data-star="2"><span class="star-glyph">✦</span><span class="node-label">СИРИУС</span></button>
+<div class="map-coordinates">RA 19h 50m<br>DEC +08° 52′</div><div class="map-stamp">NO SIGNAL<br>NO PROBLEM</div></div><div class="bottom-note">✧ Подсказка: правильного ответа, который испортит игру, здесь нет.</div></section>
+<section class="finale hidden" id="finale"><div class="final-orbit"><div class="planet"></div><span class="orbit-star s1">✦</span><span class="orbit-star s2">✧</span><span class="orbit-star s3">✦</span></div><p class="eyebrow">МИССИЯ ЗАВЕРШЕНА</p><h2>Ты нашёл <span>секрет.</span></h2><p class="final-text">Поздравляем! Ты официально доказал(а), что способен(на) исследовать галактику, не спрашивая дорогу у навигатора.</p><div class="reveal-card"><p class="reveal-label">ЗАСЕКРЕЧЕННОЕ СООБЩЕНИЕ</p><p class="reveal-message">Самая редкая вещь во Вселенной — человек, с которым даже обычный разговор становится маленьким приключением.</p><span class="signature">— оператор твоей космической миссии</span></div><button class="primary" id="againBtn">Пройти ещё раз <b>↻</b></button><p class="microcopy">P.S. Это не признание от инопланетян. Кажется.</p></section>
+<footer><span>INDEPENDENT SPACE AGENCY</span><span>© EXPEDITION 001</span></footer></main>
+<div class="modal-backdrop hidden" id="modalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><button class="close-btn" id="closeModal" aria-label="Закрыть">×</button><p class="eyebrow" id="modalEyebrow">НЕИЗВЕСТНЫЙ ОБЪЕКТ</p><h2 id="modalTitle">Сигнал пойман</h2><p id="modalText" class="modal-text"></p><div id="challengeArea"></div><p class="feedback" id="feedback" aria-live="polite"></p><button class="primary modal-action" id="modalAction">Ответить <b>↗</b></button></div></div>
+<script src="script.js"></script></body></html>
